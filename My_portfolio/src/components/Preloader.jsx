@@ -50,7 +50,7 @@ const Preloader = ({ onComplete }) => {
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.8 }}
-      className="fixed inset-0 z-[9999] bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 overflow-hidden flex flex-col items-center justify-center"
+      className="fixed inset-0 z-[9999] bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 overflow-hidden flex flex-col items-center justify-center px-4"
     >
      
       <div className="absolute inset-0 opacity-[0.03]">
@@ -78,9 +78,9 @@ const Preloader = ({ onComplete }) => {
         ))}
       </div>
 
-      {/* Floating orbs */}
+      {/* Floating orbs - Responsive sizing */}
       <motion.div
-        className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full blur-3xl"
+        className="absolute top-1/4 left-1/4 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-full blur-xl sm:blur-2xl md:blur-3xl"
         animate={{
           background: [
             "radial-gradient(circle, rgba(126, 34, 206, 0.4) 0%, rgba(126, 34, 206, 0.1) 50%, transparent 80%)",
@@ -97,7 +97,7 @@ const Preloader = ({ onComplete }) => {
         }}
       />
       <motion.div
-        className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-3xl"
+        className="absolute bottom-1/4 right-1/4 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 rounded-full blur-xl sm:blur-2xl md:blur-3xl"
         animate={{
           background: [
             "radial-gradient(circle, rgba(217, 70, 239, 0.3) 0%, rgba(217, 70, 239, 0.05) 50%, transparent 80%)",
@@ -116,45 +116,43 @@ const Preloader = ({ onComplete }) => {
       />
 
       {/* Main content */}
-      <div className="relative z-10 text-center px-4">
+      <div className="relative z-10 text-center w-full max-w-lg px-4">
         {/* Animated title */}
-        <div className="relative mb-12 md:mb-16">
+        <div className="relative mb-8 sm:mb-12 md:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             className="relative"
           >
-            
-
             {/* Subtle text */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
-              className="mt-4"
+              className="mt-2 sm:mt-4"
             >
-              <p className="text-gray-300 text-lg sm:text-xl md:text-2xl font-bold tracking-wider">
+              <p className="text-gray-300 text-sm sm:text-lg md:text-2xl font-bold tracking-wider px-2">
                 Full-Stack Developer & Computer Science Engineer
               </p>
             </motion.div>
           </motion.div>
 
-          {/* Glowing effect */}
-          <div className="absolute -inset-8 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-purple-500/10 blur-3xl" />
+          {/* Glowing effect - Responsive blur */}
+          <div className="absolute -inset-2 sm:-inset-4 md:-inset-8 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-purple-500/10 blur-sm sm:blur-xl md:blur-3xl" />
         </div>
 
 
-        {/* Futuristic loading bar */}
-        <div className="w-80 h-2 md:w-96 ml-25 mb-8">
+        {/* Futuristic loading bar - Responsive width */}
+        <div className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto mb-6 sm:mb-8">
           <div className="flex justify-between text-xs text-gray-400 mb-2">
-            <span>SYSTEM BOOT</span>
-            <span className="font-mono">
+            <span className="text-xs sm:text-sm">SYSTEM BOOT</span>
+            <span className="font-mono text-xs sm:text-sm">
               {progress.toString().padStart(3, "0")}%
             </span>
           </div>
 
-          <div className="relative h-2 bg-gray-800/50 rounded-full overflow-hidden border border-gray-700/50">
+          <div className="relative h-1.5 sm:h-2 bg-gray-800/50 rounded-full overflow-hidden border border-gray-700/50">
             {/* Main progress */}
             <motion.div
               initial={{ width: 0 }}
@@ -164,7 +162,7 @@ const Preloader = ({ onComplete }) => {
 
             {/* Scan line effect */}
             <motion.div
-              className="absolute top-0 bottom-0 w-1 bg-white/80 blur-sm"
+              className="absolute top-0 bottom-0 w-0.5 sm:w-1 bg-white/80 blur-sm"
               animate={{
                 left: ["0%", "100%"],
               }}
@@ -180,9 +178,9 @@ const Preloader = ({ onComplete }) => {
           </div>
 
           {/* Grid dots under progress bar */}
-          <div className="flex justify-between mt-2">
+          <div className="flex justify-between mt-1 sm:mt-2">
             {[...Array(10)].map((_, i) => (
-              <div key={i} className="w-1 h-1 rounded-full bg-purple-700/30" />
+              <div key={i} className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-purple-700/30" />
             ))}
           </div>
         </div>
@@ -197,33 +195,33 @@ const Preloader = ({ onComplete }) => {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="mb-12"
+          className="mb-8 sm:mb-12"
         >
-          <p className="text-gray-300 font-mono tracking-widest text-sm md:text-base flex items-center justify-center gap-2">
-            <span className="flex items-center gap-2">
+          <p className="text-gray-300 font-mono tracking-wider text-xs sm:text-sm md:text-base flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
+            <span className="flex items-center gap-1 sm:gap-2">
               <motion.span
                 animate={{ opacity: [0, 1, 0] }}
                 transition={{ duration: 1, repeat: Infinity }}
-                className="inline-block w-2 h-2 rounded-full bg-green-500"
+                className="inline-block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-green-500"
               />
-              {pulseText}
+              <span className="text-xs sm:text-sm">{pulseText}</span>
             </span>
-            <span className="text-purple-400 font-mono">[LPU-CS]</span>
+            <span className="text-purple-400 font-mono text-xs sm:text-sm">[LPU-CS]</span>
           </p>
         </motion.div>
 
         {/* Binary code rain effect */}
-        <div className="absolute left-0 right-0 bottom-10 h-20 opacity-10 overflow-hidden">
-          {[...Array(30)].map((_, i) => (
+        <div className="absolute left-0 right-0 bottom-4 sm:bottom-10 h-16 sm:h-20 opacity-10 overflow-hidden">
+          {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute font-mono text-xs text-purple-400"
+              className="absolute font-mono text-[10px] sm:text-xs text-purple-400"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: "-20px",
               }}
               animate={{
-                y: [0, 120],
+                y: [0, 100],
                 opacity: [0, 0.8, 0],
               }}
               transition={{
@@ -239,15 +237,15 @@ const Preloader = ({ onComplete }) => {
         </div>
       </div>
 
-      {/* Animated rings */}
+      {/* Animated rings - Responsive sizing */}
       <div className="absolute inset-0 flex items-center justify-center">
         {[0, 1, 2].map((i) => (
           <motion.div
             key={i}
             className="absolute border border-purple-500/20 rounded-full"
             style={{
-              width: 200 + i * 100,
-              height: 200 + i * 100,
+              width: `clamp(100px, ${120 + i * 60}px, 300px)`,
+              height: `clamp(100px, ${120 + i * 60}px, 300px)`,
             }}
             animate={{
               scale: [1, 1.1, 1],
@@ -265,10 +263,10 @@ const Preloader = ({ onComplete }) => {
       </div>
 
       {/* Particles */}
-      {[...Array(15)].map((_, i) => (
+      {[...Array(10)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-1 h-1 rounded-full"
+          className="absolute w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full"
           style={{
             background:
               "radial-gradient(circle, rgba(168, 85, 247, 0.8) 0%, rgba(168, 85, 247, 0.2) 100%)",
@@ -276,8 +274,8 @@ const Preloader = ({ onComplete }) => {
             top: `${Math.random() * 100}%`,
           }}
           animate={{
-            y: [0, -30, 0],
-            x: [0, (Math.random() - 0.5) * 20, 0],
+            y: [0, -20, 0],
+            x: [0, (Math.random() - 0.5) * 15, 0],
             opacity: [0.3, 0.8, 0.3],
           }}
           transition={{
