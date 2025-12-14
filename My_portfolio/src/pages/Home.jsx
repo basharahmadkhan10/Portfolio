@@ -166,26 +166,24 @@ const Home = () => {
       return () => clearTimeout(timer);
     }
   }, [showPreloader]);
-
-  // Add this state at the top with your other useState declarations
+  
   const [isDownloading, setIsDownloading] = useState(false);
-
-  // Updated handleDownloadCV function
+  
   const handleDownloadCV = () => {
     setIsDownloading(true);
 
     const cvFilename = "Bashar_Ahmad_Khan_CV.pdf";
     const cvUrl = `/${cvFilename}`;
 
-    // Method 1: Direct download
+    
     const link = document.createElement("a");
     link.href = cvUrl;
     link.download = cvFilename;
 
-    // Method 2: Open in new tab as fallback
+    
     link.target = "_blank";
 
-    // Handle download completion
+    
     link.onload = () => {
       setIsDownloading(false);
     };
@@ -201,7 +199,7 @@ const Home = () => {
     link.click();
     document.body.removeChild(link);
 
-    // Fallback timeout
+    
     setTimeout(() => {
       setIsDownloading(false);
     }, 3000);
@@ -217,7 +215,7 @@ const Home = () => {
     const email = formData.get("email") || "";
     const message = formData.get("message") || "";
 
-    // Better mailto: with proper encoding
+    
     const subject = `Portfolio Contact: Message from ${name}`;
     const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}%0D%0A%0D%0A---%0D%0ASent from Bashar Ahmad Khan's Portfolio`;
 
@@ -225,16 +223,16 @@ const Home = () => {
       subject
     )}&body=${encodeURIComponent(body)}`;
 
-    // Try to open email client
+    
     const mailWindow = window.open(mailtoLink, "_blank");
 
-    // If popup blocked, show alternative
+  
     if (
       !mailWindow ||
       mailWindow.closed ||
       typeof mailWindow.closed === "undefined"
     ) {
-      // Copy email to clipboard as fallback
+      
       navigator.clipboard
         .writeText("basharahmadkhan10@gmail.com")
         .then(() => {
@@ -249,7 +247,7 @@ const Home = () => {
         });
     }
 
-    // Reset form
+    
     setTimeout(() => form.reset(), 100);
   };
 
@@ -1289,7 +1287,7 @@ const Home = () => {
                     "AI-powered note-taking platform with automated summarization, semantic search, encrypted data handling, and real-time calendar syncing. Improved API throughput by 35% and user productivity by 30%.",
                   gradient: "from-purple-800 to-pink-700",
                   tags: ["React", "Node.js", "MongoDB", "OpenAI API", "JWT"],
-                  status: "Completed",
+                  status: "In Progress",
                   metrics: [
                     "35% ↑ API Throughput",
                     "30% ↑ Productivity",
@@ -1664,3 +1662,4 @@ const Home = () => {
 };
 
 export default Home;
+
