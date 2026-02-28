@@ -1485,6 +1485,7 @@ const Home = () => {
                   action="https://formspree.io/f/xyzrvklw"
                   method="POST"
                   className="space-y-6"
+                  >
                   <input
                     type="hidden"
                     name="_subject"
@@ -1521,7 +1522,7 @@ const Home = () => {
                       required
                     />
                   </div>
-                  {/* Repeat for email and message fields with name="email" and name="message" */}
+                  
                   <motion.button
                     type="submit" // Keep as "submit"
                     whileHover={{ scale: 1.03 }}
@@ -1651,4 +1652,5 @@ const Home = () => {
 };
 
 export default Home;
+
 
