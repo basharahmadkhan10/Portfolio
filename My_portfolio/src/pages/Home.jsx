@@ -61,7 +61,7 @@ const Home = () => {
       "MERN Stack Specialist",
       "Problem Solver",
       "LPU Student (CGPA: 8.30)",
-      "2-Star Rating at CodeChef"
+      "2-Star Rating at CodeChef",
       "800+ DSA Problems Solved",
     ],
     []
@@ -709,3 +709,4 @@ const Home = () => {
 };
 
 export default Home;
+
