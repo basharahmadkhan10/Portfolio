@@ -691,11 +691,11 @@ const Home = () => {
               </div>
 
               {[
-                { year: "2023 - Present", title: "B.Tech Computer Science", company: "Lovely Professional University", description: "Currently pursuing B.Tech in Computer Science & Engineering with CGPA: 8.30. Specializing in Full-Stack Development, Data Structures, Algorithms, and Software Engineering.", icon: <MdSchool />, side: "left" },
                 { year: "2024", title: "Training & Certification", company: "Multiple Platforms", description: "Completed Full-Stack Web Development training at CipherSchool. Earned certifications in Cloud Computing, Oracle AI Foundations, Computer Networking, and Hardware & OS.", icon: <GrCertificate />, side: "right" },
                 { year: "2023 - Present", title: "DSA Excellence", company: "Competitive Programming", description: "Solved 800+ problems across platforms. Achieved LeetCode contest rating of 1414. 5-star Python, C++, C, Java on HackerRank, 2-star on CodeChef.", icon: <IoCodeSlash />, side: "left" },
-                { year: "2022", title: "Matriculation", company: "Elegant Public School, Gaya", description: "Completed matriculation with strong foundation in science and mathematics. Developed interest in programming and problem-solving during this period.", icon: <MdSchool />, side: "right" },
-                { year: "2021 - 2022", title: "Intermediate Education", company: "Dav Public School, Gaya", description: "Completed intermediate education with focus on Physics, Chemistry, and Mathematics. Started learning programming fundamentals in C and C++.", icon: <MdSchool />, side: "left" },
+                { year: "2023 - Present", title: "B.Tech Computer Science", company: "Lovely Professional University", description: "Currently pursuing B.Tech in Computer Science & Engineering with CGPA: 8.30. Specializing in Full-Stack Development, Data Structures, Algorithms, and Software Engineering.", icon: <MdSchool />, side: "left" },  
+                { year: "2020-2022", title: "Intermediate Education", company: "Dav Public School, Gaya", description: "Completed intermediate education with focus on Physics, Chemistry, and Mathematics. Started learning programming fundamentals in C and C++.", icon: <MdSchool />, side: "left" },
+                { year: "2019-2020", title: "Matriculation", company: "Elegant Public School, Gaya", description: "Completed matriculation with strong foundation in science and mathematics. Developed interest in programming and problem-solving during this period.", icon: <MdSchool />, side: "right" },
               ].map((item, idx) => (
                 <motion.div
                   key={idx}
@@ -1010,6 +1010,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
