@@ -36,8 +36,7 @@ import {
   IoCloud,
   IoStatsChart,
   IoAnalytics,
-  IoServer,
-  FiCode
+  IoServer
 } from "react-icons/io5";
 import { FaAws, FaGitAlt, FaPython, FaJava } from "react-icons/fa";
 import { GrCertificate } from "react-icons/gr";
@@ -1650,6 +1649,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
