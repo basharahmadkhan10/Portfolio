@@ -37,6 +37,9 @@ import {
   IoStatsChart,
   IoAnalytics,
   IoServer,
+  FaJava,
+  FiCode,
+  TbBrandCpp
 } from "react-icons/io5";
 import { FaAws, FaGitAlt, FaPython, FaJava } from "react-icons/fa";
 import { GrCertificate } from "react-icons/gr";
@@ -63,8 +66,9 @@ const Home = () => {
     "Full-Stack Developer",
     "MERN Stack Specialist",
     "Problem Solver",
-    "LPU Student (CGPA: 8.09)",
-    "350+ DSA Problems Solved",
+    "LPU Student (CGPA: 8.30)",
+    "800+ DSA Problems Solved",
+    "Competitive Programmer with 2-star at CodeChef"
   ];
 
   useEffect(() => {
@@ -280,7 +284,7 @@ const Home = () => {
           }}
         />
 
-        {[...Array(200)].map((_, i) => (
+        {[...Array(100)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-px h-px rounded-full"
@@ -479,7 +483,7 @@ const Home = () => {
                         Lovely Professional University
                       </h2>
                       <p className="text-purple-300 text-sm sm:text-base md:text-lg">
-                        B.Tech Computer Science & Engineering • CGPA: 8.09/10
+                        B.Tech Computer Science & Engineering • CGPA: 8.30/10
                       </p>
                     </div>
                   </div>
@@ -492,7 +496,7 @@ const Home = () => {
                       </span>{" "}
                       with MERN stack and solving{" "}
                       <span className="text-pink-300 font-semibold">
-                        350+ DSA problems
+                        500+ DSA problems
                       </span>{" "}
                       on LeetCode
                     </p>
@@ -500,7 +504,7 @@ const Home = () => {
                     <div className="hidden sm:flex flex-wrap justify-center gap-3 mb-8">
                       {[
                         "MERN Stack",
-                        "350+ DSA",
+                        "800+ DSA",
                         "React",
                         "Node.js",
                         "MongoDB",
@@ -521,13 +525,37 @@ const Home = () => {
                       <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-green-900/20 to-emerald-900/10 text-green-300 border border-green-800/30">
                         <IoStatsChart className="w-3 h-3 sm:w-4 sm:h-4" />
                         <span className="text-md sm:text-sm">
-                          LeetCode 1529 Rating
+                          LeetCode 1414 Rating
+                        </span>
+                      </div>
+                      <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-blue-900/20 to-cyan-900/10 text-blue-300 border border-blue-800/30">
+                        <IoCodeSlash className="w-3 h-3 sm:w-4 sm:h-4" />
+                        <span className="text-xs sm:text-sm">
+                          2★ at Codechef
                         </span>
                       </div>
                       <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-yellow-900/20 to-orange-900/10 text-yellow-300 border border-yellow-800/30">
                         <FaPython className="w-3 h-3 sm:w-4 sm:h-4" />
                         <span className="text-xs sm:text-sm">
                           5★ Python HackerRank
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-yellow-900/20 to-orange-900/10 text-yellow-300 border border-yellow-800/30">
+                        <TbBrandCpp className="w-3 h-3 sm:w-4 sm:h-4" />
+                        <span className="text-xs sm:text-sm">
+                          5★ C++ HackerRank
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-yellow-900/20 to-orange-900/10 text-yellow-300 border border-yellow-800/30">
+                        <FiCode className="w-3 h-3 sm:w-4 sm:h-4" />
+                        <span className="text-xs sm:text-sm">
+                          5★ C HackerRank
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-yellow-900/20 to-orange-900/10 text-yellow-300 border border-yellow-800/30">
+                        <FaJava className="w-3 h-3 sm:w-4 sm:h-4" />
+                        <span className="text-xs sm:text-sm">
+                          5★ Java HackerRank
                         </span>
                       </div>
                       <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-blue-900/20 to-cyan-900/10 text-blue-300 border border-blue-800/30">
@@ -650,11 +678,11 @@ const Home = () => {
                     <p className="text-gray-400 leading-relaxed text-base sm:text-lg">
                       I'm a dedicated Computer Science Engineering student at{" "}
                       <span className="text-purple-300 font-semibold">
-                        Lovely Professional University (CGPA: 8.09)
+                        Lovely Professional University (CGPA: 8.30)
                       </span>
                       , specializing in Full-Stack MERN Development. With
                       expertise in building scalable web applications and
-                      solving 350+ DSA problems, I combine academic knowledge
+                      solving 800+ DSA problems, I combine academic knowledge
                       with practical skills to create efficient solutions.
                     </p>
                   </div>
@@ -1153,7 +1181,7 @@ const Home = () => {
                   title: "B.Tech Computer Science",
                   company: "Lovely Professional University",
                   description:
-                    "Currently pursuing B.Tech in Computer Science & Engineering with CGPA: 8.09. Specializing in Full-Stack Development, Data Structures, Algorithms, and Software Engineering.",
+                    "Currently pursuing B.Tech in Computer Science & Engineering with CGPA: 8.30. Specializing in Full-Stack Development, Data Structures, Algorithms, and Software Engineering.",
                   icon: <MdSchool />,
                   side: "left",
                 },
@@ -1171,7 +1199,7 @@ const Home = () => {
                   title: "DSA Excellence",
                   company: "Competitive Programming",
                   description:
-                    "Solved 350+ problems across platforms. Achieved LeetCode contest rating of 1529. 5-star Python, 4-star C++, 3-star C on HackerRank. 2-star on CodeChef.",
+                    "Solved 800+ problems across platforms. Achieved LeetCode contest rating of 1414. 5-star Python, 5-star C++, 5-star C on HackerRank, 2-star on CodeChef.",
                   icon: <IoCodeSlash />,
                   side: "left",
                 },
@@ -1281,16 +1309,16 @@ const Home = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
               {[
                 {
-                  title: "Scribly - AI Note-Taking",
-                  category: "MERN Stack • AI Integration",
+                  title: "CivicFix- Civic Issue Reporting, Accountability & Trust Platform",
+                  category: "MERN Stack • RBAC mechanisms • SLA monitoring",
                   description:
-                    "AI-powered note-taking platform with automated summarization, semantic search, encrypted data handling, and real-time calendar syncing. Improved API throughput by 35% and user productivity by 30%.",
+                    "A civic issue management system enabling citizens and government stakeholders to report, track, and resolve public infrastructure issues with transparent accountability. Focused on backend correctness through state-machine-driven workflows, role-based authorization, SLA enforcement, and immutable audit logging.",
                   gradient: "from-purple-800 to-pink-700",
-                  tags: ["React", "Node.js", "MongoDB", "OpenAI API", "JWT"],
-                  status: "In Progress",
+                  tags: ["React.js", "Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "REST APIs", "RBAC", "Middleware", "Git/GitHub", "Postman"],
+                  status: "Completed",
                   metrics: [
-                    "35% ↑ API Throughput",
-                    "30% ↑ Productivity",
+                    "4 distinct role-based user types (Citizen, Officer, Supervisor, Admin)",
+                    "100% valid status transitions",
                     "40% ↓ Manual Work",
                   ],
                 },
@@ -1322,44 +1350,7 @@ const Home = () => {
                     "SEO Optimized",
                   ],
                 },
-                {
-                  title: "Algorithm Visualizer",
-                  category: "Educational Tool • DSA",
-                  description:
-                    "Interactive visualization tool for sorting and searching algorithms with step-by-step explanations and performance comparisons. Helps understand algorithm complexity visually.",
-                  gradient: "from-pink-800 to-purple-700",
-                  tags: ["React", "D3.js", "TypeScript", "Algorithms"],
-                  status: "In Progress",
-                  metrics: [
-                    "15+ Algorithms",
-                    "Real-time Vis",
-                    "Complexity Analysis",
-                  ],
-                },
-                {
-                  title: "E-Commerce Dashboard",
-                  category: "Full-Stack • Admin Panel",
-                  description:
-                    "Complete e-commerce solution with admin dashboard, product management, user authentication, and real-time order tracking. Features role-based access control.",
-                  gradient: "from-purple-800 to-blue-700",
-                  tags: ["React", "Node.js", "Express", "MongoDB", "JWT"],
-                  status: "Completed",
-                  metrics: [
-                    "Role-based Access",
-                    "Real-time Orders",
-                    "Product Mgmt",
-                  ],
-                },
-                {
-                  title: "Code Review Assistant",
-                  category: "AI • Developer Tool",
-                  description:
-                    "AI-powered code review tool that analyzes code quality, suggests improvements, and detects common anti-patterns using OpenAI API and custom analysis algorithms.",
-                  gradient: "from-pink-800 to-red-700",
-                  tags: ["Python", "FastAPI", "React", "OpenAI API"],
-                  status: "Planned",
-                  metrics: ["AI Analysis", "Code Quality", "Best Practices"],
-                },
+                
               ].map((project, idx) => (
                 <ReactAtropos
                   key={idx}
@@ -1436,7 +1427,7 @@ const Home = () => {
 
                     <div className="flex items-center justify-between mt-auto">
                       <a
-                        href="#"
+                        href="https://civicfix-frontend02.onrender.com"
                         onClick={(e) => {
                           e.preventDefault();
                           alert("Project link will be added soon!");
@@ -1494,8 +1485,6 @@ const Home = () => {
                   action="https://formspree.io/f/xyzrvklw"
                   method="POST"
                   className="space-y-6"
-                >
-                  {/* Hidden fields for configuration */}
                   <input
                     type="hidden"
                     name="_subject"
@@ -1662,3 +1651,4 @@ const Home = () => {
 };
 
 export default Home;
+
