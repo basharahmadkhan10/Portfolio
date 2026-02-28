@@ -37,7 +37,6 @@ import {
   IoStatsChart,
   IoAnalytics,
   IoServer,
-  FaJava,
   FiCode,
   TbBrandCpp
 } from "react-icons/io5";
@@ -1652,5 +1651,6 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
