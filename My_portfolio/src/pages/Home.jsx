@@ -61,7 +61,6 @@ const Home = () => {
     "Full-Stack Developer",
     "MERN Stack Specialist",
     "Problem Solver",
-    "LPU Student (CGPA: 8.30)",
     "800+ DSA Problems Solved",
     "Competitive Programmer",
   ];
@@ -209,8 +208,8 @@ const Home = () => {
 
   const projectLinks = {
     civicfix: "https://civicfix-frontend02.onrender.com",
-    billquill: "https://bill-quill-demo.onrender.com",
-    portfolio: "https://bashar-dev.vercel.app",
+    billquill: "https://bill-quill-frontend.onrender.com",
+    portfolio: "https://portfolio03.onrender.com",
   };
 
   if (showPreloader) {
@@ -218,7 +217,7 @@ const Home = () => {
   }
 
   return (
-    <div className="relative min-h-screen bg-gray-950 mt-10 text-gray-100 overflow-x-hidden">
+    <div className="relative min-h-screen bg-gray-950 text-gray-100 overflow-x-hidden">
       <RippleEffect />
 
       {isReady && (
@@ -270,7 +269,6 @@ const Home = () => {
 
       <Header />
 
-      {/* Hero Section */}
       <section id="hero" className="min-h-screen flex items-center justify-center px-4 md:px-6 lg:px-8 pt-20 md:pt-24">
         <div className="max-w-6xl mx-auto w-full text-center">
           <motion.div
@@ -280,12 +278,12 @@ const Home = () => {
             className="mb-12 md:mb-16"
           >
             <div className="relative mb-8 md:mb-12">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[0.9] mb-6 md:mb-8">
+              <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-black tracking-tight leading-[0.9] mb-6 md:mb-8">
                 <span className="block text-gray-300 mb-3 md:mb-4">Hello, I'm</span>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 mb-3 md:mb-4">
                   Bashar Ahmad Khan
                 </span>
-                <span className="block text-gray-300 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mt-6 md:mt-8">
+                <span className="block text-gray-300 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mt-6 md:mt-8">
                   <span className="text-[#fff]">A </span>
                   <span className="typing-text text-transparent bg-clip-text bg-[#fff] pr-1">
                     {typingText}
@@ -384,7 +382,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* About Section - Removed 3D effect, added shiny hover */}
       <section id="about" className="min-h-screen flex items-center px-4 md:px-6 lg:px-8 py-12 md:py-20">
         <div className="max-w-6xl mx-auto w-full">
           <motion.div
@@ -465,7 +462,7 @@ const Home = () => {
                       { icon: <FiGithub />, label: "GitHub", username: "@basharahmadkhan10", link: "https://github.com/basharahmadkhan10" },
                       { icon: <FiLinkedin />, label: "LinkedIn", username: "Bashar Ahmad Khan", link: "https://linkedin.com/in/basharahmadkhan10" },
                       { icon: <FiMail />, label: "Email", username: "basharahmadkhan10@gmail.com", link: "mailto:basharahmadkhan10@gmail.com" },
-                      { icon: <MdComputer />, label: "LeetCode", username: "800+ Problems Solved", link: "https://leetcode.com" },
+                      { icon: <MdComputer />, label: "DSA", username: "800+ Problems Solved", link: "https://codolio.com/profile/Bash24k" },
                     ].map((social, idx) => (
                       <a
                         key={idx}
@@ -488,8 +485,7 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
-
-      {/* Skills Section - Fixed HackerRank ratings */}
+      
       <section id="skills" className="min-h-screen flex items-center px-4 md:px-6 lg:px-8 py-12 md:py-20">
         <div className="max-w-6xl mx-auto w-full">
           <motion.div
@@ -500,8 +496,8 @@ const Home = () => {
             className="mb-12 md:mb-16"
           >
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 md:mb-12 text-center">
-              <span className="text-gray-300">My Technical</span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Stack</span>
+              <span className="text-gray-300">Technical </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Skills</span>
             </h2>
 
             <p className="text-gray-400 text-lg md:text-xl text-center max-w-3xl mx-auto mb-12 md:mb-16 leading-relaxed">
@@ -512,11 +508,11 @@ const Home = () => {
               <h3 className="text-2xl sm:text-3xl font-bold text-gray-300 mb-8 text-center">Programming Languages</h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8">
                 {[
-                  { icon: <FaPython className="text-3xl" />, name: "Python", description: "5★ HackerRank", color: "from-blue-800 to-yellow-700", level: "Advanced", stars: 5 },
-                  { icon: <TbBrandCpp className="text-3xl" />, name: "C++", description: "5★ HackerRank", color: "from-blue-800 to-indigo-700", level: "Advanced", stars: 5 },
-                  { icon: <FiCode className="text-3xl" />, name: "C", description: "5★ HackerRank", color: "from-blue-700 to-cyan-600", level: "Advanced", stars: 5 },
-                  { icon: <FaJava className="text-3xl" />, name: "Java", description: "5★ HackerRank", color: "from-red-800 to-orange-700", level: "Advanced", stars: 5 },
-                  { icon: <TbBrandJavascript className="text-3xl" />, name: "JavaScript", description: "ES6+", color: "from-yellow-800 to-yellow-600", level: "Advanced", stars: 5 },
+                  { icon: <FaPython className="text-3xl" />, name: "Python", description: "5★ HackerRank", color: "from-blue-800 to-yellow-700", level: "Intermediate", stars: 5 },
+                  { icon: <TbBrandCpp className="text-3xl" />, name: "C++", description: "5★ HackerRank", color: "from-blue-800 to-indigo-700", level: "Intermediate", stars: 5 },
+                  { icon: <FiCode className="text-3xl" />, name: "C", description: "5★ HackerRank", color: "from-blue-700 to-cyan-600", level: "Intermediate", stars: 5 },
+                  { icon: <FaJava className="text-3xl" />, name: "Java", description: "5★ HackerRank", color: "from-red-800 to-orange-700", level: "Intermediate", stars: 5 },
+                  { icon: <TbBrandJavascript className="text-3xl" />, name: "JavaScript", description: "ES6+", color: "from-yellow-800 to-yellow-600", level: "Intermediate", stars: 5 },
                 ].map((skill, idx) => (
                   <motion.div
                     key={idx}
@@ -558,11 +554,11 @@ const Home = () => {
               <h3 className="text-2xl sm:text-3xl font-bold text-gray-300 mb-8 text-center">Web Development</h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8">
                 {[
-                  { icon: <TbBrandReact />, name: "React.js", description: "Frontend Library", color: "from-cyan-800 to-blue-700", level: "Advanced" },
+                  { icon: <TbBrandReact />, name: "React.js", description: "Frontend Library", color: "from-cyan-800 to-blue-700", level: "Intermediate" },
                   { icon: <TbBrandNodejs />, name: "Node.js", description: "Runtime", color: "from-green-800 to-emerald-700", level: "Intermediate" },
                   { icon: <SiExpress />, name: "Express.js", description: "Backend Framework", color: "from-gray-700 to-gray-800", level: "Intermediate" },
                   { icon: <TbBrandMongodb />, name: "MongoDB", description: "NoSQL Database", color: "from-green-700 to-emerald-600", level: "Intermediate" },
-                  { icon: <SiTailwindcss />, name: "Tailwind CSS", description: "CSS Framework", color: "from-teal-800 to-cyan-700", level: "Advanced" },
+                  { icon: <SiTailwindcss />, name: "Tailwind CSS", description: "CSS Framework", color: "from-teal-800 to-cyan-700", level: "Intermediate" },
                   { icon: <TbBrandTypescript />, name: "TypeScript", description: "Type Safety", color: "from-blue-800 to-indigo-700", level: "Intermediate" },
                   { icon: <TbBrandNextjs />, name: "Next.js", description: "React Framework", color: "from-gray-800 to-gray-900", level: "Intermediate" },
                   { icon: <TbBrandPhp />, name: "PHP", description: "Server-side", color: "from-purple-800 to-indigo-700", level: "Basic" },
@@ -607,8 +603,7 @@ const Home = () => {
                   { icon: <FaGitAlt />, name: "Git", description: "Version Control", color: "from-orange-800 to-red-700", level: "Advanced" },
                   { icon: <IoCodeSlash />, name: "VS Code", description: "Code Editor", color: "from-blue-800 to-cyan-700", level: "Advanced" },
                   { icon: <SiDocker />, name: "Docker", description: "Containerization", color: "from-blue-800 to-cyan-700", level: "Basic" },
-                  { icon: <FaAws />, name: "AWS", description: "Cloud Services", color: "from-orange-800 to-yellow-700", level: "Basic" },
-                  { icon: <IoStatsChart />, name: "Data Science", description: "NumPy & Tools", color: "from-blue-800 to-green-700", level: "Intermediate" },
+        
                 ].map((skill, idx) => (
                   <motion.div
                     key={idx}
@@ -646,7 +641,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Journey Section - Fixed alignment */}
       <section id="story" className="min-h-screen flex items-center px-4 md:px-6 lg:px-8 py-12 md:py-20">
         <div className="max-w-6xl mx-auto w-full">
           <motion.div
@@ -719,7 +713,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Projects Section - Removed 3D effect, added working links */}
       <section id="projects" className="min-h-screen flex items-center px-4 md:px-6 lg:px-8 py-12 md:py-20">
         <div className="max-w-6xl mx-auto w-full">
           <motion.div
@@ -847,7 +840,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
+  
       <section id="contact" className="min-h-screen flex items-center px-4 md:px-6 lg:px-8 py-12 md:py-20">
         <div className="max-w-5xl mx-auto w-full">
           <motion.div
@@ -921,7 +914,7 @@ const Home = () => {
                       { icon: <FiMail />, title: "Email", value: "basharahmadkhan10@gmail.com", link: "mailto:basharahmadkhan10@gmail.com" },
                       { icon: <FiLinkedin />, title: "LinkedIn", value: "linkedin.com/in/basharahmadkhan10", link: "https://linkedin.com/in/basharahmadkhan10" },
                       { icon: <FiGithub />, title: "GitHub", value: "github.com/basharahmadkhan10", link: "https://github.com/basharahmadkhan10" },
-                      { icon: <IoCodeSlash />, title: "LeetCode", value: "800+ Problems Solved", link: "https://leetcode.com" },
+                      { icon: <IoCodeSlash />, title: "LeetCode", value: "500+ Problems Solved", link: "https://leetcode.com/u/Bash__24k/" },
                     ].map((contact, idx) => (
                       <a
                         key={idx}
@@ -982,7 +975,7 @@ const Home = () => {
               <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-700 to-pink-600 flex items-center justify-center">
                 <span className="font-black text-black text-sm">B</span>
               </div>
-              <span className="text-gray-400 text-sm">© 2024 Bashar Ahmad Khan. All rights reserved.</span>
+              <span className="text-gray-400 text-sm">© 2025 Bashar Ahmad Khan. All rights reserved.</span>
             </div>
             <div className="flex items-center gap-4">
               <span className="text-gray-500 text-sm">Built with React, Framer Motion & Tailwind CSS</span>
@@ -995,3 +988,4 @@ const Home = () => {
 };
 
 export default Home;
+
