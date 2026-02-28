@@ -598,7 +598,7 @@ const Home = () => {
 
             <div>
               <h3 className="text-2xl sm:text-3xl font-bold text-gray-300 mb-8 text-center">Tools & Platforms</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8 justify-center">
                 {[
                   { icon: <FaGitAlt />, name: "Git", description: "Version Control", color: "from-orange-800 to-red-700", level: "Advanced" },
                   { icon: <IoCodeSlash />, name: "VS Code", description: "Code Editor", color: "from-blue-800 to-cyan-700", level: "Advanced" },
@@ -725,7 +725,7 @@ const Home = () => {
             <div className="text-center mb-12 md:mb-16">
               <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
                 <span className="text-gray-300">My</span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">.Projects</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400"> Projects</span>
               </h2>
               <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
                 Full-stack applications demonstrating technical expertise and problem-solving abilities
@@ -988,4 +988,5 @@ const Home = () => {
 };
 
 export default Home;
+
 
