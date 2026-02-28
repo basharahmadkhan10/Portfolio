@@ -68,7 +68,7 @@ const Home = () => {
   );
 
   const derived = useMemo(() => {
-    const opacity = Math.max(0, 1 - scrollProgress * 2); 
+    const opacity = Math.max(0, 1 - scrollProgress * 2);
     const parallax1 = scrollProgress * 20;
     const parallax2 = scrollProgress * 20;
     return { opacity, parallax1, parallax2 };
@@ -350,6 +350,7 @@ const Home = () => {
             }}
           />
         </div>
+        
         <div className="fixed right-4 md:right-6 top-1/2 -translate-y-1/2 z-30 flex flex-col gap-4 md:gap-5">
           {sections.map((_, index) => (
             <button
@@ -375,7 +376,9 @@ const Home = () => {
             </button>
           ))}
         </div>
+        
         <Header />
+        
         <section
           id="hero"
           className="min-h-screen flex items-center justify-center px-4 md:px-6 lg:px-8 pt-20 md:pt-24"
@@ -418,7 +421,7 @@ const Home = () => {
                 alwaysActive={true}
                 className="w-full"
               >
-                <div className="relative aspect-[4/7]  sm:aspect-[16/9] md:aspect-[21/12] rounded-3xl md:rounded-4xl overflow-hidden border-2 border-purple-800/50 shadow-2xl shadow-purple-900/30">
+                <div className="relative aspect-[4/7] sm:aspect-[16/9] md:aspect-[21/12] rounded-3xl md:rounded-4xl overflow-hidden border-2 border-purple-800/50 shadow-2xl shadow-purple-900/30">
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-purple-900/30 to-gray-950/90" />
 
                   <div className="absolute inset-0 opacity-10">
@@ -594,6 +597,7 @@ const Home = () => {
           </div>
         </section>
 
+        {/* FIXED CONTACT SECTION */}
         <section
           id="contact"
           className="min-h-screen flex items-center px-4 md:px-6 lg:px-8 py-12 md:py-20"
@@ -621,7 +625,8 @@ const Home = () => {
               </p>
 
               <div className="grid lg:grid-cols-2 gap-10 md:gap-12">
-                <div className=" w-86 md:w-120 md:h-140 p-6 sm:p-8 md:p-10 rounded-3xl backdrop-blur-sm bg-gradient-to-br from-gray-900/60 to-gray-950/60 border-2 border-gray-800/50 shadow-2xl shadow-purple-900/10">
+                {/* Left side - Contact Form */}
+                <div className="w-full p-6 sm:p-8 md:p-10 rounded-3xl backdrop-blur-sm bg-gradient-to-br from-gray-900/60 to-gray-950/60 border-2 border-gray-800/50 shadow-2xl shadow-purple-900/10">
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-8">
                     Send Me a Message
                   </h3>
@@ -655,10 +660,10 @@ const Home = () => {
                     </div>
 
                     <div>
-                      {/* ✅ FIX: name must be "message" (Formspree standard + your intent) */}
                       <textarea
                         name="message"
                         placeholder="Tell me about yourself"
+                        rows="4"
                         className="w-full p-4 bg-gray-900/50 border-2 border-gray-800/50 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-700 transition-all"
                         required
                       />
@@ -675,9 +680,90 @@ const Home = () => {
                   </form>
                 </div>
 
-                {/* Right side contact cards: keep yours unchanged */}
+                {/* Right side contact cards */}
                 <div className="flex flex-col justify-center space-y-8">
-                  {/* ... keep same ... */}
+                  <div className="w-full backdrop-blur-sm bg-gradient-to-br from-gray-900/60 to-gray-950/60 border-2 border-gray-800/50 p-6 sm:p-8 rounded-3xl shadow-2xl shadow-purple-900/10">
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-8">Get In Touch</h3>
+                    <div className="space-y-6">
+                      {[
+                        { 
+                          icon: <FiMail className="w-5 h-5" />, 
+                          title: "Email", 
+                          value: "basharahmadkhan10@gmail.com", 
+                          link: "mailto:basharahmadkhan10@gmail.com" 
+                        },
+                        { 
+                          icon: <FiLinkedin className="w-5 h-5" />, 
+                          title: "LinkedIn", 
+                          value: "linkedin.com/in/basharahmadkhan10",
+                          link: "https://linkedin.com/in/basharahmadkhan10" 
+                        },
+                        { 
+                          icon: <FiGithub className="w-5 h-5" />, 
+                          title: "GitHub", 
+                          value: "github.com/basharahmadkhan10", 
+                          link: "https://github.com/basharahmadkhan10" 
+                        },
+                        { 
+                          icon: <IoCodeSlash className="w-5 h-5" />, 
+                          title: "LeetCode", 
+                          value: "350+ Problems Solved", 
+                          link: "https://leetcode.com" 
+                        },
+                      ].map((contact, idx) => (
+                        <a 
+                          key={idx} 
+                          href={contact.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="flex items-center gap-4 p-4 rounded-2xl bg-gray-900/30 hover:bg-gray-800/40 transition-all duration-300 group atropos-clickable" 
+                          data-atropos-offset="0"
+                        >
+                          <div className="p-3 rounded-xl bg-gradient-to-br from-purple-900/40 to-pink-900/20 group-hover:from-purple-800/40 group-hover:to-pink-800/20 transition-all">
+                            {contact.icon}
+                          </div>
+                          <div className="flex-1 text-left">
+                            <h4 className="font-semibold text-gray-300 group-hover:text-white">
+                              {contact.title}
+                            </h4>
+                            <p className="text-gray-200 text-sm group-hover:text-gray-300">
+                              {contact.value}
+                            </p>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="w-full backdrop-blur-sm bg-gradient-to-br from-gray-900/60 to-gray-950/60 border-2 border-gray-800/50 p-6 sm:p-8 rounded-3xl shadow-2xl shadow-purple-900/10">
+                    <h3 className="text-2xl font-bold text-white mb-4">Let's Collaborate</h3>
+                    <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+                      Seeking internships and full-time opportunities in software development. 
+                      Open to freelance projects and technical collaborations.
+                    </p>
+                    <div className="grid grid-cols-2 gap-4">
+                      <m.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={handleDownloadCV}
+                        disabled={isDownloading}
+                        className={`flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-purple-900/30 to-pink-900/20 text-purple-300 border border-purple-800/30 hover:border-purple-700/50 transition-all atropos-button-fix ${
+                          isDownloading ? "opacity-50 cursor-not-allowed" : ""
+                        }`}
+                      >
+                        <FiDownload className="w-4 h-4" />
+                        <span className="text-sm">
+                          {isDownloading ? "Downloading..." : "Download CV"}
+                        </span>
+                      </m.button>
+                      <button
+                        onClick={() => scrollToSection(4)}
+                        className="py-2 bg-gradient-to-r from-pink-900/30 to-pink-900/10 text-pink-300 rounded-xl hover:bg-gradient-to-r hover:from-pink-800/40 hover:to-pink-800/20 transition-all border border-pink-800/30 text-sm font-medium flex items-center justify-center"
+                      >
+                        View Projects
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </m.div>
@@ -709,4 +795,3 @@ const Home = () => {
 };
 
 export default Home;
-
