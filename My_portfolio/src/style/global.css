@@ -1,0 +1,130 @@
+/* Add to your global.css after existing styles */
+@import "tailwindcss";
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better container alignment */
+.container-custom {
+  @apply max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12;
+}
+
+/* Better section spacing */
+.section-spacing {
+  @apply py-8 md:py-12 lg:py-16;
+}
+
+/* Improved grid gaps */
+.grid-custom {
+  @apply gap-4 sm:gap-6 md:gap-8;
+}
+
+/* Better typography scaling */
+.text-responsive {
+  @apply text-base sm:text-lg md:text-xl;
+}
+
+/* Glass effect enhancements */
+.glass-effect-enhanced {
+  @apply backdrop-blur-xl bg-white/5 border border-white/10;
+}
+
+/* Animation delays for staggered effects */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* Smooth transitions */
+.transition-smooth {
+  @apply transition-all duration-300 ease-out;
+}
+
+/* Water flow animation for timeline */
+@keyframes water-flow {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.water-flow {
+  animation: water-flow 3s linear infinite;
+}
+
+/* Hover effects for cards */
+.card-hover {
+  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl;
+}
+
+/* Gradient borders */
+.gradient-border {
+  border: 1px solid transparent;
+  background: linear-gradient(black, black) padding-box,
+              linear-gradient(135deg, #00f7ff, #6d28d9, #ec4899) border-box;
+}
+
+/* Responsive fixes */
+@media (max-width: 640px) {
+  .section-spacing {
+    @apply py-6;
+  }
+  
+  .container-custom {
+    @apply px-3;
+  }
+}
+
+/* Fix for mobile overflow */
+@media (max-width: 769px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* Print styles */
+.glass-effect-cinema {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(15, 23, 42, 0.3);
+}
+.atropos-button {
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 1000;
+}
+.gradient-text-cinema {
+  background: linear-gradient(135deg, #06b6d4, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+/* Add this to your global CSS or create a style tag */
+.scroll-progress {
+  transition: transform 0.1s cubic-bezier(0.1, 0.6, 0.1, 1) !important;
+}
+/* Add to your global CSS file */
+.atropos-button-fix {
+  position: relative !important;
+  z-index: 9999 !important;
+  pointer-events: auto !important;
+  transform: translateZ(100px) !important;
+}
+/* Add to your global CSS */
+.atropos-clickable {
+  position: relative;
+  z-index: 1000 !important;
+  pointer-events: auto !important;
+  transform: translateZ(100px) !important;
+  isolation: isolate;
+}
