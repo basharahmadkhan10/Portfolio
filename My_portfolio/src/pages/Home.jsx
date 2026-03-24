@@ -29,8 +29,6 @@ const Home = () => {
     "800+ DSA Problems Solved",
     "Competitive Programmer",
   ];
-
-  // Typing effect (unchanged)
   useEffect(() => {
     if (!showPreloader) {
       const currentText = typingOptions[typingIndex];
@@ -58,8 +56,7 @@ const Home = () => {
       return () => clearTimeout(timer);
     }
   }, [typingText, isDeleting, typingIndex, typingSpeed, showPreloader]);
-
-  // Set isReady after preloader disappears
+  
   useEffect(() => {
     if (!showPreloader) {
       const timer = setTimeout(() => setIsReady(true), 500);
@@ -67,7 +64,6 @@ const Home = () => {
     }
   }, [showPreloader]);
 
-  // Scroll handling (unchanged)
   const scrollToSection = (index) => {
     setActiveSection(index);
     const section = document.getElementById(sections[index]);
@@ -119,7 +115,6 @@ const Home = () => {
     return () => window.removeEventListener("scroll", throttledScroll);
   }, [showPreloader]);
 
-  // CV download handler (unchanged)
   const handleDownloadCV = () => {
     setIsDownloading(true);
     const cvFilename = "Bashar_Ahmad_Khan_CV.pdf";
