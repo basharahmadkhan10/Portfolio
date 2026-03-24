@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 const Preloader = ({ onComplete }) => {
   useEffect(() => {
-    // Simulate loading delay (adjust duration as needed)
     const timer = setTimeout(() => {
       onComplete();
     }, 2000);
@@ -19,7 +18,7 @@ const Preloader = ({ onComplete }) => {
         transition={{ duration: 0.5 }}
         className="text-center"
       >
-        <div className="relative w-24 h-24 mx-auto mb-8">
+        <div className="relative w-15 h-15 mx-auto mb-8">
           <motion.div
             className="absolute inset-0 border-4 border-purple-500/30 rounded-full"
             animate={{ rotate: 360 }}
