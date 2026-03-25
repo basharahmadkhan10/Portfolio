@@ -40,7 +40,7 @@ const Story = () => {
 
             {[
               {
-                year: "2024",
+                year: "2025",
                 title: "Training & Certification",
                 company: "Multiple Platforms",
                 description:
@@ -49,7 +49,7 @@ const Story = () => {
                 side: "right",
               },
               {
-                year: "2023 - Present",
+                year: "2024 - Present",
                 title: "DSA Excellence",
                 company: "Competitive Programming",
                 description:
